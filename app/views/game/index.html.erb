@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-md-4 pull-left">
+    <div class="row">
+      <%= image_tag @profiles.first.picture, width: '300px;', height: '300px;' %>
+      <%= @profiles.first.name %>
+      <%= @profiles.first.votes %>
+      <%= link_to 'Vote', vote_path(@profiles.first.id), class: 'btn btn-success', method: :post %>
+    </div>
+  </div>
+  <div class="col-md-4 pull-right">
+    <div class="row">
+      <%= image_tag @profiles.last.picture, width: '300px;', height: '300px;' %>
+      <%= @profiles.last.name %>
+      <%= @profiles.last.votes %>
+      <%= link_to 'Vote', vote_path(@profiles.last.id), class: 'btn btn-success', method: :post %>
+    </div>
+  </div>
+</div>
